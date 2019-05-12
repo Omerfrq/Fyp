@@ -23,12 +23,12 @@
   <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png" />
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-      'gtm.start':
-        new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-PSBVSWT');</script>
   <!-- End Google Tag Manager -->
 </head>
@@ -104,13 +104,13 @@
             <li class="header-menu">
               <span>General</span>
             </li>
-            <li class="sidebar-dropdown">
-              <a href="#">
+            <li>
+              <a href="index.html">
                 <i class="fa fa-tachometer-alt"></i>
                 <span class="menu-text">Dashboard</span>
-                <span class="badge badge-pill badge-warning">New</span>
+                <!-- <span class="badge badge-pill badge-warning">New</span> -->
               </a>
-              <div class="sidebar-submenu">
+              <!-- <div class="sidebar-submenu">
                 <ul>
                   <li>
                     <a href="#">Dashboard 1
@@ -124,15 +124,15 @@
                     <a href="#">Dashboard 3</a>
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </li>
             <!-- <li class="header-menu"> -->
             <span>Extra</span>
             </li>
             <li>
-              <a href="#">
+              <a href="/corpusview.html">
                 <i class="fa fa-folder"></i>
-                <span class="menu-text">Corpus</span>
+                <span class="menu-text">My Corpus</span>
                 <!-- <span class="badge badge-pill badge-primary">Beta</span> -->
               </a>
             </li>
@@ -140,202 +140,6 @@
         </div>
         <!-- sidebar-menu  -->
       </div>
-      <!-- sidebar-footer  -->
-      <!-- <div class="sidebar-footer">
-        <div class="dropdown">
-                <a
-                        href="#"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                >
-                        <i class="fa fa-bell"></i>
-                        <span
-                                class="badge badge-pill badge-warning notification"
-                                >3</span
-                        >
-                </a>
-                <div
-                        class="dropdown-menu notifications"
-                        aria-labelledby="dropdownMenuMessage"
-                >
-                        <div class="notifications-header">
-                                <i class="fa fa-bell"></i>
-                                Notifications
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                                <div class="notification-content">
-                                        <div class="icon">
-                                                <i
-                                                        class="fas fa-check text-success border border-success"
-                                                ></i>
-                                        </div>
-                                        <div class="content">
-                                                <div class="notification-detail">
-                                                        Lorem ipsum dolor sit amet
-                                                        consectetur adipisicing elit. In
-                                                        totam explicabo
-                                                </div>
-                                                <div class="notification-time">
-                                                        6 minutes ago
-                                                </div>
-                                        </div>
-                                </div>
-                        </a>
-                        <a class="dropdown-item" href="#">
-                                <div class="notification-content">
-                                        <div class="icon">
-                                                <i
-                                                        class="fas fa-exclamation text-info border border-info"
-                                                ></i>
-                                        </div>
-                                        <div class="content">
-                                                <div class="notification-detail">
-                                                        Lorem ipsum dolor sit amet
-                                                        consectetur adipisicing elit. In
-                                                        totam explicabo
-                                                </div>
-                                                <div class="notification-time">
-                                                        Today
-                                                </div>
-                                        </div>
-                                </div>
-                        </a>
-                        <a class="dropdown-item" href="#">
-                                <div class="notification-content">
-                                        <div class="icon">
-                                                <i
-                                                        class="fas fa-exclamation-triangle text-warning border border-warning"
-                                                ></i>
-                                        </div>
-                                        <div class="content">
-                                                <div class="notification-detail">
-                                                        Lorem ipsum dolor sit amet
-                                                        consectetur adipisicing elit. In
-                                                        totam explicabo
-                                                </div>
-                                                <div class="notification-time">
-                                                        Yesterday
-                                                </div>
-                                        </div>
-                                </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="#"
-                                >View all notifications</a
-                        >
-                </div>
-        </div>
-        <div class="dropdown">
-                <a
-                        href="#"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                >
-                        <i class="fa fa-envelope"></i>
-                        <span
-                                class="badge badge-pill badge-success notification"
-                                >7</span
-                        >
-                </a>
-                <div
-                        class="dropdown-menu messages"
-                        aria-labelledby="dropdownMenuMessage"
-                >
-                        <div class="messages-header">
-                                <i class="fa fa-envelope"></i>
-                                Messages
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                                <div class="message-content">
-                                        <div class="pic">
-                                                <img src="img/user.jpg" alt="" />
-                                        </div>
-                                        <div class="content">
-                                                <div class="message-title">
-                                                        <strong> Jhon doe</strong>
-                                                </div>
-                                                <div class="message-detail">
-                                                        Lorem ipsum dolor sit amet
-                                                        consectetur adipisicing elit. In
-                                                        totam explicabo
-                                                </div>
-                                        </div>
-                                </div>
-                        </a>
-                        <a class="dropdown-item" href="#">
-                                <div class="message-content">
-                                        <div class="pic">
-                                                <img src="img/user.jpg" alt="" />
-                                        </div>
-                                        <div class="content">
-                                                <div class="message-title">
-                                                        <strong> Jhon doe</strong>
-                                                </div>
-                                                <div class="message-detail">
-                                                        Lorem ipsum dolor sit amet
-                                                        consectetur adipisicing elit. In
-                                                        totam explicabo
-                                                </div>
-                                        </div>
-                                </div>
-                        </a>
-                        <a class="dropdown-item" href="#">
-                                <div class="message-content">
-                                        <div class="pic">
-                                                <img src="img/user.jpg" alt="" />
-                                        </div>
-                                        <div class="content">
-                                                <div class="message-title">
-                                                        <strong> Jhon doe</strong>
-                                                </div>
-                                                <div class="message-detail">
-                                                        Lorem ipsum dolor sit amet
-                                                        consectetur adipisicing elit. In
-                                                        totam explicabo
-                                                </div>
-                                        </div>
-                                </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="#"
-                                >View all messages</a
-                        >
-                </div>
-        </div>
-        <div class="dropdown">
-                <a
-                        href="#"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                >
-                        <i class="fa fa-cog"></i>
-                        <span class="badge-sonar"></span>
-                </a>
-                <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuMessage"
-                >
-                        <a class="dropdown-item" href="#">My profile</a>
-                        <a class="dropdown-item" href="#">Help</a>
-                        <a class="dropdown-item" href="#">Setting</a>
-                </div>
-        </div>
-        <div>
-                <a href="#">
-                        <i class="fa fa-power-off"></i>
-                </a>
-        </div>
-        <div class="pinned-footer">
-                <a href="#">
-                        <i class="fas fa-ellipsis-h"></i>
-                </a>
-        </div>
-</div> -->
     </nav>
     <!-- page-content  -->
 
@@ -419,14 +223,16 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card text-center">
-                  <img class="mx-auto d-block card-custom" src="img/home-builder.svg">
-                  <div class="card-body">
-                    <h5 class="card-title">Create Corpus.</h5>
-                    <p class="card-text">Create a Corpus to Be Analyzed.</p>
-                    <p class="card-text"><small class="text-muted"></small></p>
+                <a href="corpusbuilder.html">
+                  <div class="card text-center">
+                    <img class="mx-auto d-block card-custom" src="img/home-builder.svg">
+                    <div class="card-body">
+                      <h5 class="card-title">Create Corpus.</h5>
+                      <p class="card-text">Create a Corpus to Be Analyzed.</p>
+                      <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
