@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="jumbotron">
+    <main class="container-fluid pt-2 col-md-11">
+        <div class="jumbotron bg-light shadow">
+            <div class="row bg-light">
+                <div class="col-md-12">
+                    <h4>Corpus Builder</h4>
+                    <button type="button" class="btn btn-primary"> <i class="fa fa-wrench"></i>
+                        Corpus
+                        Builder
+                    </button>
+                    <table class="table mt-3 table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Created At</th>
+                                <th scope="col">Status</th>
+                                <td>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Serena Reviews</td>
+                                <td>02/21/2018</td>
+                                <td>Processed</td>
+                                <td><button class="btn btn-sm  btn-outline-info"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-info"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>PC Reviews</td>
+                                <td>04/21/2018</td>
+                                <td>Processed</td>
+                                <td><button class="btn btn-sm  btn-outline-info"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-info"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>London Hotel</td>
+                                <td>03/21/2018</td>
+                                <td>Unprocessed</td>
+                                <td><button class="btn btn-sm  btn-outline-info"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-info"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Corpus Builder -->
+
+            <div class="jumbotron bg-light mt-2">
+                <div class="row bg-light">
+                    <div class="col-md-12">
+                        <h4 class="lead">Corpus Builder</h4>
+                        <p class="text-muted">Use this form to build your custom corpus. You can either upload a file to
+                            edit, or copy and
+                            paste text below. Once you have your text in place, you will be able to transform your text
+                            with options such as remove words, modify sentence parameters, etc.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Description</label>
+                            <input type="text" class="form-control" placeholder="Description">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="corpus">Corpus <span class="text-muted"> Copy and paste text here, or upload a
+                                text/pdf file
+                                above.</span></label>
+                        <textarea rows="15" id="corpus" name="corpus" class="form-control form-control-lg"
+                            spellcheck="false" autocomplete="off" placeholder="Start Typing Here..."></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        Character Count: <span class="text-muted">0</span>
+                    </div>
+                    <div class="col-md-2">
+                        Word Count: <span class="text-muted">0</span>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="float-right">Clear Corpus</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class=" fa fa-user text-white"></i>
+                                Preprocessing Options (Panel Goes Here..)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-info float-right">Submit Corpus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+</html>
