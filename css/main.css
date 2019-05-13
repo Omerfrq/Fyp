@@ -30,6 +30,13 @@ a {
   color: black;
 }
 
+.w {
+  width: 190px;
+  font-size:0.9rem;
+}
+
+
+
 a:hover {
   text-decoration: none;
   color: black;

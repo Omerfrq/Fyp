@@ -12,73 +12,177 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sidebar-themes.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png" />
 </head>
 
-<body class="jumbotron">
-    <main class="container-fluid pt-2 col-md-11">
-        <div class="jumbotron bg-light shadow">
-            <div class="jumbotron bg-light mt-2">
+<body>
+    <div class="page-wrapper default-theme toggled">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+            <div class="container">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-primary mr-3" href="analyze.html">Analyze Text</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn btn-primary text-white" href="#" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class=" fa fa-user text-white"></i>
+                                Omer
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">View Profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav id="sidebar" class="sidebar-wrapper ">
+            <div class="sidebar-content">
+                <!-- sidebar-brand  -->
+                <div class="sidebar-item sidebar-brand">
+                    <img src="img/favicon-32x32.png" alt="" />
+                </div>
+                <div class="sidebar-item sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span class="menu-text">Dashboard</span>
+                                <!-- <span class="badge badge-pill badge-warning">New</span> -->
+                            </a>
+                            <!-- <div class="sidebar-submenu">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Dashboard 1
+                                                    <span class="badge badge-pill badge-success">Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Dashboard 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Dashboard 3</a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                        </li>
+                        <!-- <li class="header-menu"> -->
+                        </li>
+                        <li>
+                            <a href="corpusview.html">
+                                <i class="fa fa-folder"></i>
+                                <span class="menu-text">Corpus</span>
+                                <!-- <span class="badge badge-pill badge-primary">Beta</span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analyze.html">
+                                <i class="fa fa-chart-line"></i>
+                                <span class="menu-text">Analyze Text</span>
+                                <!-- <span class="badge badge-pill badge-primary">Beta</span> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+        </nav>
+
+        <main class="jumbotron container col-md-11 mr-5">
+            <div class="jumbotron bg-light shadow">
                 <div class="row bg-light">
                     <div class="col-md-12">
-                        <h4 class="lead">Corpus Builder</h4>
-                        <p class="text-muted">Use this form to build your custom corpus. You can either upload a file to
-                            edit, or copy and
-                            paste text below. Once you have your text in place, you will be able to transform your text
-                            with options such as remove words, modify sentence parameters, etc.</p>
+                        <h4 class="display-4">Analyze Text</h4>
+                        <p class="text-muted">Select a corpus name and a corpus sub-name if you defined it. Once you
+                            have made a selection, click add. You can select one corpus or many to analyze.</p>
                         <hr>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" placeholder="Name">
+                            <label for="name">Corpus Name</label>
+                            <input type="text" class="form-control" placeholder="Select Corpus Name">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Description</label>
-                            <input type="text" class="form-control" placeholder="Description">
+                            <label for="">Select Custom List</label>
+                            <input type="text" class="form-control" placeholder="Custom List">
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <label for="corpus">Corpus <span class="text-muted"> Copy and paste text here, or upload a
-                                text/pdf file
-                                above.</span></label>
-                        <textarea rows="15" id="corpus" name="corpus" class="form-control form-control-lg"
-                            spellcheck="false" autocomplete="off" placeholder="Start Typing Here..."></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        Character Count: <span class="text-muted">0</span>
-                    </div>
-                    <div class="col-md-2">
-                        Word Count: <span class="text-muted">0</span>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="float-right">Clear Corpus</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class=" fa fa-user text-white"></i>
-                                Preprocessing Options (Panel Goes Here..)
-                            </a>
+                        <h5>Feature Selection</h5>
+                        <hr>
+                        <p>Select the feature you want computed below. You can select one feature or multiple features
+                            for
+                            computation.</p>
+                        <h6>Frequency</h6>
+                        <hr>
+                        <section class="Frequency">
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Personal Pronouns</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Demonstrative Pronouns</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Relative Pronouns</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Conjunctions</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Subordinate Clauses</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Relative Clauses</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Interrogative Sentences</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Prepositions</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Gerunds</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Nouns</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Adjectives</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Contractions</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Verbs</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Dates</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Time</div>
+                        </section>
+                        <h6 class="m-2">Overall</h6>
+                        <hr>
+                        <section class="Overall">
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Sentiment</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Clustering</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Named Entities</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Extract Dates</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Extract Time</div>
+                        </section>
+                        <h6 class="m-2">Top-Occuring</h6>
+                        <hr>
+                        <section class="Top-occuring">
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Words</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Nouns</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Adjectives</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Verbs</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Conjunctions</div>
+                            <div class="btn btn-outline-dark w mt-2 mr-2">Custom List
+                            </div>
+                        </section>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <button type="submit" id="canalyze" class="btn btn-info float-right w">Submit</button>
+                                <button class="btn btn-outline-dark float-right w mr-2" type="button">Reset</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button class="btn btn-info float-right">Submit Corpus</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -89,5 +193,6 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 <script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
